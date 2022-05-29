@@ -1,7 +1,7 @@
 <?php 
 if(isset($_GET['page'])){
     $page = $_GET['page'];
-    switch[$page]{
+    switch($page){
         case '':
             include "dashboard.php";
             break;
