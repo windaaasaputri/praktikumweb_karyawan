@@ -2,8 +2,7 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Tambah Karyawan</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-
-        <?php
+            <?php
             include_once "../database/database.php";
 
             if (isset($_POST['button_simpan'])) {
@@ -12,7 +11,8 @@
                 $jenis_kelamin = $_POST['jenis_kelamin'];
                 $status_menikah = $_POST['status_menikah'];
 
-                $insertSQL = "INSERT INTO karyawan VALUES (NULL,'" . $nik . "','" . $nama_karyawan . "','" . $jenis_kelamin . "','" . $status_menikah . "')";
+                $insertSQL = "INSERT INTO karyawan VALUES (NULL,'" . $nik . "','" . $nama_karyawan . "','"
+                    . $jenis_kelamin . "','" . $status_menikah . "')";
 
                 $insertSQL = "INSERT INTO karyawan VALUES (NULL, ?, ?, ?, ?)";
 
@@ -29,10 +29,9 @@
             }
 
             ?>
-
+        </div>
     </div>
-</div>
-<div>
+    <div>
         <form action="" method="post">
             <div class="mb-3">
                 <label for="nik" class="form-label">Nomor Induk Karyawan</label>
