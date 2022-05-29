@@ -18,8 +18,17 @@ if(isset($_GET['page'])){
             include "karyawan/karyawandelete.php";
             break;
         case 'bagian':
-            include "bagian.php";
+            include "bagian/bagian.php";
             break;
+        case 'bagiancreate':
+                include "bagian/bagiancreate.php";
+                break;
+        case 'bagianupdate':
+                include "bagian/bagianupdate.php";
+                break;
+        case 'bagiandelete':
+                include "bagian/bagiandelete.php";
+                break;
         default:
             include "dashboard.php";
             break;
