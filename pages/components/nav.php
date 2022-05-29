@@ -14,7 +14,7 @@
             </a>
           </li>
           <li class="nav-item">
-          <a class="nav-link <?php echo $_GET['page'] == 'bagian' ? ' active' : '' ?>" href="?page=bagian">
+          <a class="nav-link <?php echo $_GET['page'] == 'bagian' || $_GET['page'] == 'bagiancreate' ? ' active' : '' ?>" href="?page=bagian">
               <span data-feather="layers"></span>
               Data Bagian
             </a>
