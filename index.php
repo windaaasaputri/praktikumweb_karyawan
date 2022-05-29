@@ -48,9 +48,23 @@
       $row_count = $statement->rowCount();
 
       if ($row_count > 0) {
+        
     ?>
+    <div class="alert alert-success" role="alert">
+          Username/Password sudah benar!
+      </div>
+
+    <?php
+      header('Location: pages/dashboard.html');
+      } else {
+    ?>
+      <div class="alert alert-danger" role="alert">
+        Username/Password salah!
+      </div>
+    <?php
       }
     }
+    ?>
 
     <div class="form-floating">
       <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
