@@ -40,8 +40,10 @@
     if (isset($_POST['button login'])) {
       $loginSQL = "SELECT * FROM pengguna WHERE username='" . $_POST['username'] . "' AND password=MD5('" . $_POST['password'] . "')";
       include_once "database/database.php";
-    }
     
+      $database = new Database();
+    }
+
     <div class="form-floating">
       <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Username</label>
