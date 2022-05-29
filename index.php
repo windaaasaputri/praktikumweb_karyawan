@@ -36,6 +36,12 @@
     <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Silakan Login</h1>
 
+    <?php
+    if (isset($_POST['button login'])) {
+      $loginSQL = "SELECT * FROM pengguna WHERE username='" . $_POST['username'] . "' AND password=MD5('" . $_POST['password'] . "')";
+      include_once "database/database.php";
+    }
+    
     <div class="form-floating">
       <input type="text" name="username" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Username</label>
