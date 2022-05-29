@@ -42,6 +42,9 @@
       include_once "database/database.php";
     
       $database = new Database();
+      $connection = $database->getConnection();
+      $statement = $connection->prepare($loginSQL);
+      $statement->execute();
     }
 
     <div class="form-floating">
