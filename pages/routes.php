@@ -8,6 +8,9 @@ if(isset($_GET['page'])){
         case 'karyawan':
             include "karyawan.php";
             break;
+        case 'karyawancreate':
+            include "karyawancreate.php";
+            break;
         case 'bagian':
             include "bagian.php";
             break;
