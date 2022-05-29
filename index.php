@@ -55,7 +55,7 @@
       </div>
 
     <?php
-      header('Location: pages/dashboard.html');
+      header('Location: pages/dashboard.php');
       } else {
     ?>
       <div class="alert alert-danger" role="alert">
