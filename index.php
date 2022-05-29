@@ -37,6 +37,11 @@
     <h1 class="h3 mb-3 fw-normal">Silakan Login</h1>
 
     <?php
+     session_start();
+     if (isset($_SESSION['username'])) {
+       header('Location: pages/dashboard.php');
+     }
+
     if (isset($_POST['button login'])) {
       $loginSQL = "SELECT * FROM pengguna WHERE username='" . $_POST['username'] . "' AND password=MD5('" . $_POST['password'] . "')";
       include_once "database/database.php";
@@ -55,6 +60,8 @@
       </div>
 
     <?php
+    $_SESSION['username'] = $_POST['username'];
+    
       header('Location: pages/dashboard.php');
       } else {
     ?>
