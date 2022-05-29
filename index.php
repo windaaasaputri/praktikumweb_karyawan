@@ -45,6 +45,11 @@
       $connection = $database->getConnection();
       $statement = $connection->prepare($loginSQL);
       $statement->execute();
+      $row_count = $statement->rowCount();
+
+      if ($row_count > 0) {
+    ?>
+      }
     }
 
     <div class="form-floating">
